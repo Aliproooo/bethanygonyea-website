@@ -1,0 +1,12 @@
+# Dependencies and build output
+node_modules/
+.vercel/
+
+# Secrets (set these in Vercel, never commit them)
+.env
+.env.*
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
