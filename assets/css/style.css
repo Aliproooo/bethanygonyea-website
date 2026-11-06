@@ -650,6 +650,9 @@ ul, ol { margin: 0; padding: 0; }
 .footer nav a:hover { color: var(--gold-pale); }
 .footer__bottom { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding-top: 26px; font-size: .8rem; color: var(--faint); }
 .footer__bottom p { margin: 0; }
+.footer__credit { margin: 22px 0 0; text-align: center; font-size: .7rem; letter-spacing: .04em; color: rgba(241, 234, 220, .32); }
+.footer__credit a { color: rgba(241, 234, 220, .5); border-bottom: 1px solid rgba(241, 234, 220, .18); transition: color .3s, border-color .3s; }
+.footer__credit a:hover { color: var(--gold-pale); border-color: var(--gold); }
 
 /* =========================================================
    RESPONSIVE
