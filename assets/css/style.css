@@ -264,6 +264,17 @@ ul, ol { margin: 0; padding: 0; }
 .float-card__trace path { fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-linejoin: round; }
 .float-card__dot { width: 10px; height: 10px; border-radius: 50%; background: #7ee2b8; box-shadow: 0 0 0 4px rgba(126, 226, 184, .18); }
 .float-card__stars { color: var(--gold); font-size: 1.2rem; }
+/* Blue "Biofeedback Specialist" bubble */
+.float-card--blue {
+  left: -6%; top: 2%; padding: 11px 20px 11px 12px; border-radius: 999px; gap: 12px;
+  background: linear-gradient(135deg, rgba(64, 132, 255, .92), rgba(36, 84, 214, .9));
+  border: 1px solid rgba(170, 205, 255, .7);
+  box-shadow: 0 0 0 6px rgba(70, 135, 255, .16), 0 18px 40px -14px rgba(30, 80, 220, .8);
+}
+.float-card--blue strong { color: #fff; font-size: .9rem; }
+.float-card--blue span { color: rgba(235, 243, 255, .9); font-size: .76rem; font-weight: 600; letter-spacing: .04em; }
+.float-card__pulse { flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .18); border: 1px solid rgba(255, 255, 255, .45); }
+.float-card__pulse svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 @keyframes blink { 50% { opacity: .35; } }
 
@@ -492,7 +503,9 @@ ul, ol { margin: 0; padding: 0; }
 .mosaic { display: grid; grid-template-columns: .85fr 1.4fr; gap: 18px; margin-top: clamp(60px, 9vh, 100px); }
 .mosaic__item { position: relative; margin: 0; height: clamp(320px, 34vw, 500px); border-radius: 24px; overflow: hidden; background: #111; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .8); }
 .mosaic__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--ease), filter 1s; }
-.mosaic__item--podium img { object-position: 64% 40%; }
+.mosaic--single { grid-template-columns: 1fr; }
+.mosaic--single .mosaic__item { height: clamp(300px, 40vw, 540px); }
+.mosaic--single .mosaic__item img { object-position: 50% 32%; }
 .mosaic__item:hover img { transform: scale(1.05); }
 .mosaic__item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 22px 18px; font-size: .86rem; font-weight: 600; color: #fff; background: linear-gradient(180deg, transparent, rgba(10, 8, 32, .88)); }
 
@@ -540,7 +553,7 @@ ul, ol { margin: 0; padding: 0; }
 .about__grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(36px, 6vw, 90px); align-items: center; }
 .about__photo { position: relative; margin: 0; }
 .about__photo::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 1px solid #d8ab55; border-radius: 30px; }
-.about__photo img { position: relative; border-radius: 30px; width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; object-position: 38% 50%; box-shadow: 0 50px 90px -40px rgba(44, 28, 110, .45); }
+.about__photo img { position: relative; border-radius: 30px; width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; object-position: 78% 50%; box-shadow: 0 50px 90px -40px rgba(44, 28, 110, .45); }
 .about__sig { position: absolute; left: 24px; bottom: 22px; font-family: var(--serif); font-style: italic; font-size: 1.4rem; color: #fff; text-shadow: 0 2px 18px rgba(0, 0, 0, .6); }
 .creds { list-style: none; margin-top: 28px; display: grid; gap: 2px; }
 .creds li { position: relative; padding: 14px 0 14px 40px; border-bottom: 1px solid rgba(26, 21, 56, .08); color: var(--ink-soft); font-size: 1rem; line-height: 1.5; }
@@ -584,6 +597,16 @@ ul, ol { margin: 0; padding: 0; }
 .contact__list { list-style: none; margin-top: 30px; display: grid; gap: 14px; }
 .contact__list li { display: flex; gap: 14px; color: var(--muted); }
 .contact__list span { color: var(--gold); }
+.contact__call { display: flex; align-items: center; gap: 16px; margin-top: 32px; padding: 16px 22px 16px 16px; border-radius: 20px; border: 1px solid rgba(226, 194, 125, .32); background: linear-gradient(100deg, rgba(226, 194, 125, .12), rgba(164, 140, 255, .06)); transition: border-color .4s, transform .6s var(--ease); }
+.contact__call:hover { border-color: var(--gold); transform: translateY(-3px); }
+.contact__call-icon { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--gold-grad); }
+.contact__call-icon svg { width: 22px; height: 22px; fill: none; stroke: #1a1236; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.contact__call small { display: block; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--faint); font-weight: 700; }
+.contact__call b { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.35rem; line-height: 1.2; color: var(--text); }
+.contact__call-arrow { margin-left: auto; color: var(--gold); font-size: 1.2rem; }
+.contact__photo { position: relative; margin: 26px 0 0; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .85), 0 0 0 1px rgba(226, 194, 125, .18); }
+.contact__photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 42% 62%; }
+.contact__photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 50px 20px 16px; font-size: .82rem; font-weight: 600; color: #fff; background: linear-gradient(180deg, transparent, rgba(10, 8, 32, .85)); }
 .form { padding: clamp(24px, 3.4vw, 44px); border-radius: 30px; background: rgba(20, 15, 54, .6); border: 1px solid rgba(226, 194, 125, .2); box-shadow: 0 60px 120px -50px rgba(0, 0, 0, .9), inset 0 1px 0 rgba(255, 255, 255, .06); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .field { margin-bottom: 18px; }
