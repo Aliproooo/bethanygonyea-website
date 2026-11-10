@@ -34,9 +34,8 @@ Until these are set, the form shows the visitor a polite "not connected yet" mes
 
 ## Replace before launch
 
-- **Book links**: *Become A Consciousness Athlete* now links straight to its Amazon page (taken from numinousonline.org). Its Audible button and the *Dealing With Difficult People* Amazon button still open search results; swap in the direct product URLs (search `REPLACE` in `index.html`).
+- **Book links**: *Become A Consciousness Athlete* now links straight to its Amazon page (taken from numinousonline.org), and *Dealing With Difficult People* has a direct Audible link (from Bethany). The first book's Audible button and the second book's Amazon button still open search results; swap in the direct product URLs (search `REPLACE` in `index.html`).
 - **NUMINOUS links**: the NUMINOUS section links only to numinousonline.org pages, plus its sign-up form and Givebutter donation page. Some links on numinousonline.org itself point to a temporary domain (`gkq.qbf.temporary.site`), which is worth fixing on that site.
 - **Calendly**: the "Book a 15-min call" buttons (4 places) use `https://calendly.com/bethany-gonyea/15-phone-consult-with-bethany`, taken from numinousonline.org. To change it, find-and-replace that URL in `index.html`.
-- **YouTube**: the "Consciousness Athletes" links open a YouTube search. Swap in the channel URL.
 - **LinkedIn**: no URL was provided, so there is no LinkedIn link yet. Add one to the footer's "Elsewhere" list.
 - **Domain**: canonical, Open Graph, `robots.txt` and `sitemap.xml` use `https://bethanygonyea.com`. Change them if the live domain is spelled differently.

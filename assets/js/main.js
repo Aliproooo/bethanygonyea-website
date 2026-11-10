@@ -980,6 +980,26 @@
     });
   }
 
+  /* ---------- Lifestyle video: load the YouTube player only when asked ---------- */
+  const video = $('#method-video');
+  if (video) {
+    video.addEventListener('click', (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return; // let "open in new tab" work
+      e.preventDefault();
+      const frame = document.createElement('iframe');
+      frame.src = `https://www.youtube-nocookie.com/embed/${video.dataset.yt}?autoplay=1&rel=0`;
+      frame.title = 'Become A Consciousness Athlete';
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      frame.allowFullscreen = true;
+      const wrap = document.createElement('div');
+      wrap.className = 'video__frame';
+      wrap.appendChild(frame);
+      video.replaceWith(wrap);
+      frame.focus();
+    });
+  }
+
   const year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 })();
